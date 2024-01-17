@@ -5,6 +5,13 @@
 // Exemplo:
 
 // Caso o parâmetro passado para a função concatName seja o array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
+
+const nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+
+const frase = ['foguete', 'não', 'tem', 'ré'];
+
+const capitao = ['captain', 'my', 'captain'];
+
 // O que será testado:
 
 // Retorne 'Paolillo, Lucas' quando o parâmetro passado na funcão concatName seja ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
@@ -12,3 +19,15 @@
 // Retorne 'ré, foguete' quando o parâmetro passado na funcão concatName seja ['foguete', 'não', 'tem', 'ré'];
 
 // Retorne 'captain, captain' quando o parâmetro passado na funcão concatName seja ['captain', 'my', 'captain'].
+
+const concatName = (array) => {
+  const result = [array[array.length -1], array[0]];
+  return result;
+};
+
+console.log(concatName(nomes));
+
+console.log(concatName(frase));
+
+console.log(concatName(capitao));
+

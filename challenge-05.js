@@ -11,4 +11,12 @@
 
 // Retorne 5 pontos quando o time tenha 1 vitória e 2 empates;
 
-// Retorne 0 pontos quando o time tenha 0 vitórias e 0 empates.
+// Retorne 0 pontos quando  o time tenha 0 vitórias e 0 empates.
+
+const footballPoints = (wins, ties) => `${(wins * 3) + ties} pontos`;
+
+console.log(footballPoints(14,8));
+
+console.log(footballPoints(1,2));
+
+console.log(footballPoints(0,0));

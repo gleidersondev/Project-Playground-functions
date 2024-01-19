@@ -26,3 +26,22 @@
 
 // Retorne a string 'os gatos trombam e o rato foge' caso a função catAndMouse receba os parâmetros onde os gatos estejam na mesma distância do rato.
 
+const catAndMouse = (mouse, cat1, cat2) => {
+
+  let oneCat = Math.abs(mouse - cat1);
+  let twoCat = Math.abs(mouse - cat2);
+
+  if (oneCat < twoCat) {
+    return 'cat1';
+  } else if ((oneCat === twoCat) )  {
+    return 'os gatos trombam e o rato foge';
+  } else {
+    return 'cat2';
+  }
+}
+
+console.log(catAndMouse(3,6,5));
+
+console.log(catAndMouse(10,16,22));
+
+console.log(catAndMouse(4,4,4));

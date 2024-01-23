@@ -58,10 +58,10 @@ const generatePhoneNumber = (array) => {
     return `(${part1}) ${part2}-${part3}`;
 };
 
-// console.log(generatePhoneNumber(fone));
-// console.log(generatePhoneNumber(fone2));
+console.log(generatePhoneNumber(fone));
+console.log(generatePhoneNumber(fone2));
 console.log(generatePhoneNumber(fone3));
-// console.log(generatePhoneNumber(fone4));
-// console.log(generatePhoneNumber(fone5));
+console.log(generatePhoneNumber(fone4));
+console.log(generatePhoneNumber(fone5));
 
 // Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], a função generatePhoneNumber deverá retornar (12) 34567-8901.

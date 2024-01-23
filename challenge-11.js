@@ -21,7 +21,7 @@
 
 const fone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 const fone2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9];
-const fone3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1];
+const fone3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 6];
 const fone4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 22];
 const fone5 = [-1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 
@@ -32,7 +32,7 @@ const generatePhoneNumber = (array) => {
   let repeatedNumbers = 0;
 
   // verifica se o array contem 11 numeros, caso contrário "incorrectSize"
-  if (array.length < 11) {
+  if (array.length !== 11) {
     return incorrectSize;
   };
 
@@ -49,19 +49,19 @@ const generatePhoneNumber = (array) => {
         return incorrectValues;
       };
     };
+  };
 
     let part1 = array.slice(0,2).join('');
     let part2 = array.slice(2,7).join('');
     let part3 = array.slice(7).join('');
 
     return `(${part1}) ${part2}-${part3}`;
-  };
 };
 
-console.log(generatePhoneNumber(fone));
-console.log(generatePhoneNumber(fone2));
+// console.log(generatePhoneNumber(fone));
+// console.log(generatePhoneNumber(fone2));
 console.log(generatePhoneNumber(fone3));
-console.log(generatePhoneNumber(fone4));
-console.log(generatePhoneNumber(fone5));
+// console.log(generatePhoneNumber(fone4));
+// console.log(generatePhoneNumber(fone5));
 
 // Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], a função generatePhoneNumber deverá retornar (12) 34567-8901.

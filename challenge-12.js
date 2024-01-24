@@ -41,7 +41,7 @@ const triangleCheck = (lineA, lineB, lineC) => {
   } else if (!caseD && !caseA || !caseE && !caseB || !caseF && !lineC) {
     result = true;
   }
-  return result;
+  return result
 }
 
 console.log(triangleCheck(10,14,8));

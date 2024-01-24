@@ -1,4 +1,4 @@
-// 13 - Crie uma função de boas vindas ao Bar da Trybe!
+// 13 - Crie uma função de boas vindas ao Botecando!
 // Implemente a função `hydrate` que recebe uma string e retorna a sugestão de quantos copos de água você deve beber.
 
 // String recebida:

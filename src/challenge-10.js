@@ -5,6 +5,7 @@
 
 // Um array com nomes de tecnologias ;
 // Um nome referente ao nome de uma pessoa.
+
 // A função deverá retornar:
 
 // 'Vazio!' se não receber parâmetro algum ;
@@ -42,3 +43,28 @@
 // Retorne uma lista de objetos ordenados quando é passada uma lista com 5 tecnologias;
 
 // Retorne a mensagem de erro 'Vazio!' quando a lista não tiver tecnologias.
+
+const techList = (arr, person) => {
+
+  const result = [];
+
+  if (arr.length) {
+    for (let i = 0; i < arr.length; i +=1) {
+      result.push(
+        {
+          tech: arr[i],
+          name: person 
+        }
+      )
+    }
+    return result;
+  } else {
+    return 'Vazio!'
+  }
+};
+
+
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas'));
+
+console.log(techList([],'Lucas'));

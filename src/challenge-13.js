@@ -37,21 +37,18 @@ const hydrate = (quantEbebida) => {
   const dadosDeEntrada = quantEbebida.split(/[,\s]+/);
   const quantidade = parseInt(dadosDeEntrada[0]);
   const bebida = dadosDeEntrada[1];
-
     
-if (typeof bebida === 'number') {
-    return 'Depois da quantidade você deve especificar o nome da bebida';
+if (!isNaN(parseInt(bebida))) {
+    return 'Especifique primeiro a quantidade e depois a bebida';
   } else if (isNaN(quantidade) || quantidade < 1 || quantidade > 9) {
-    console.log(dadosDeEntrada);
-    console.log(bebida);
     return 'A quantidade deve ser um número maior que 0 e menor que 9';
   } else {
     return `${quantidade} copos de água`;
   }
 };
 
-// console.log(hydrate('7, cervejas'));
-// console.log(hydrate('0, cervejas'));
+console.log(hydrate('7, cervejas'));
+console.log(hydrate('0, cervejas'));
 console.log(hydrate('cervejas, 5'));
-// console.log(hydrate('7,cervejas'));
-// console.log(hydrate('10, cervejas'));
+console.log(hydrate('7,cervejas'));
+console.log(hydrate('10, cervejas'));
